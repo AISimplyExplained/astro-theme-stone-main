@@ -1,0 +1,63 @@
+---
+const stats = [
+  {
+    name: 'Years',
+    value: '3',
+  },
+  {
+    name: 'Experts',
+    value: '15',
+  },
+  {
+    name: 'Projects',
+    value: '122',
+  },
+  {
+    name: 'Awards',
+    value: '3',
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
+      <img
+          class="mx-auto h-auto w-full max-w-xl rounded-3xl"
+          width="576"
+          height="864"
+          src="/assets/about.webp"
+          alt="Our experts working together"
+      />
+      <div class="flex flex-col gap-10">
+        <!-- Mission description -->
+        <div class="space-y-8 sm:space-y-12">
+          <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our mission</h2>
+          <div class="space-y-6">
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+              At Visionative, we're dedicated to empowering small businesses by crafting bespoke, engaging digital experiences. Our commitment is to deliver innovative website solutions that capture the essence of your brand and drive growth.
+            </p>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+              Our team of experts works closely with each client, ensuring that every project is handled with the utmost precision and care. From initial design to final launch, we strive for excellence and aim to exceed expectations.
+            </p>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+              With Visionative, you gain a partner that's invested in your success. We believe in building relationships that last and websites that make a lasting impression.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {
+            stats.map((stat) => (
+                <div class="border-primary-900/10 dark:border-primary-300/10 rounded-3xl border p-6">
+                  <dt class="text-base">{stat.name}</dt>
+                  <dd class="text-3xl font-medium tracking-tight">{stat.value}</dd>
+                </div>
+            ))
+          }
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>

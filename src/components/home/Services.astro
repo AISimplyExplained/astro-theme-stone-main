@@ -1,0 +1,46 @@
+---
+const services = [
+  {
+    step: '01',
+    name: 'Design',
+    description:
+        "Our design process merges aesthetics with functionality. We create visually stunning and user-friendly interfaces that effectively communicate your brand's message and engage your audience. Our designs are tailored to your unique needs, ensuring a seamless and impactful user experience.",
+  },
+  {
+    step: '02',
+    name: 'Develop',
+    description:
+        "From concept to code, our development team turns designs into reality. We specialize in building responsive, robust, and scalable websites and applications. Using cutting-edge technologies, we ensure that your digital presence is not just impressive but also technologically advanced and secure.",
+  },
+  {
+    step: '03',
+    name: 'Maintain',
+    description:
+        "Our commitment extends beyond launch. We provide ongoing maintenance to ensure your website remains up-to-date, secure, and functional. From regular updates to performance optimizations, we're here to ensure your digital platform performs well and evolves with your business."
+  },
+];
+
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Services</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        {
+          services.map((service) => (
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+              <p class="text-sm">{service.step}</p>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-xl font-medium">{service.name}</h3>
+                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
